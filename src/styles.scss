@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 $styleVersion: 4.1;
+
+$skipComponentStyles: (cx-mini-cart, cx-search-box);
+
 @import '~@spartacus/styles/index';
+@import 'styles/custom//mini-cart/';
+@import 'styles/custom//search-box/';
