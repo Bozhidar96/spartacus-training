@@ -10,6 +10,9 @@ import { CheckoutFeatureModule } from './features/checkout/checkout-feature.modu
 import { CartSavedCartFeatureModule } from './features/cart/cart-saved-cart-feature.module';
 import { CartQuickOrderFeatureModule } from './features/cart/cart-quick-order-feature.module';
 import { AsmFeatureModule } from './features/asm/asm-feature.module';
+import { OutletsModule } from './features/outlets/outlets.module';
+import { SapLogoModule } from './features/sap-logo/sap-logo.module';
+import { CovidBanerModule } from './features/covid-baner/covid-baner.module';
 
 @NgModule({
   declarations: [],
@@ -94,6 +97,10 @@ import { AsmFeatureModule } from './features/asm/asm-feature.module';
     CartSavedCartFeatureModule,
     CartQuickOrderFeatureModule,
     AsmFeatureModule,
-  ]
+    OutletsModule,
+    SapLogoModule,
+    CovidBanerModule,
+  ],
+  exports: [ OutletsModule, SapLogoModule, CovidBanerModule ]
 })
 export class SpartacusFeaturesModule { }

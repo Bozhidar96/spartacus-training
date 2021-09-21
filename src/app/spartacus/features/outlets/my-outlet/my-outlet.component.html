@@ -1,0 +1,12 @@
+<ng-template [cxOutletRef]="productDetailOutlets.SUMMARY" [cxOutletPos]="position.BEFORE">
+  <h1>Works!</h1>
+</ng-template>
+
+<ng-template [cxOutletRef]="productDetailOutlets.PRICE" [cxOutletPos]="position.REPLACE" let-model>
+  <span *ngIf="currentProduct | async as product">
+    <h1>{{product.price?.formattedValue}}</h1>
+  </span>
+
+  <h1>{{model.product.price?.formattedValue}}</h1>
+  <span *ngIf="model.product.availableForPickup"><h1>Available</h1></span>
+</ng-template>
